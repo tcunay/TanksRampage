@@ -12,6 +12,10 @@ public class Spawner : MonoBehaviour
     [SerializeField] private int _delaySpawn = 30;
     [SerializeField] private int _increaseEnemies = 1;
     [SerializeField] private int _initialQuantityEnemies = 2;
+    [SerializeField] private Transform _minXPosition;
+    [SerializeField] private Transform _maxXPosition;
+    [SerializeField] private Transform _minZPosition;
+    [SerializeField] private Transform _maxZPosition;
 
     private Vector3[] _spawnPoints;
     private void Start()
@@ -39,17 +43,16 @@ public class Spawner : MonoBehaviour
         for (int i = 0; i < _spawnPoints.Length; i++)
         {
             _spawnPoints[i] = SetLocation();
-            var enemy = Instantiate(_enemy, _spawnPoints[i], Quaternion.identity);//LookRotation(new Vector3(0, 1, 0), new Vector3(0, 0, 1)));
+            var enemy = Instantiate(_enemy, _spawnPoints[i], Quaternion.identity);
             enemy.EnemyDied += _killCounter.OnKillsChanged;
         }
     }
 
     private Vector3 SetLocation()
     {
-        return new Vector3(Random.Range(-22f, 22f), 1.1f , Random.Range(3f, 33f));
+        return new Vector3(Random.Range(_minXPosition.position.x, _maxXPosition.position.x), 1.1f ,
+            Random.Range(_minZPosition.position.z, _maxZPosition.position.z));
     }
-
-
 
 }
 

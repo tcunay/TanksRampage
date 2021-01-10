@@ -114,6 +114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe74404536a23e4d82e25e42007a2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _minXPosition: -22
+  _maxXPosition: 22
+  _minZPosition: 3
+  _maxZPosition: 33
   _waypointsSize: 5
   _moveSpeed: 5
   _rotateSpeed: 0
@@ -129,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0fd84ca4ba8cf8479b6ee00b3141931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dulo: {fileID: 7598117115915634141}
+  _cannon: {fileID: 7598117115915634141}
   _turret: {fileID: 5284752147053026673}
   _target: {fileID: 5446229040943791547, guid: ecb08c1a2af5c1947b6caa11fbf9a2e8, type: 3}
 --- !u!114 &1165812967990930076

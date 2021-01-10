@@ -11,10 +11,8 @@ public abstract class Bullet : MonoBehaviour
     [SerializeField] protected int damage = 1;
     [SerializeField] protected ParticleSystem explosion;
 
-    protected bool ownedByPlayer = false;
-    protected float delay = 5f;
-
-    public bool OwnedByPlayer => ownedByPlayer;
+    protected bool OwnedByPlayer = false;
+    protected float Delay = 5f;
 
     public void DestroyBullet(float delay)
     {
@@ -22,26 +20,26 @@ public abstract class Bullet : MonoBehaviour
     }
     public void InstallForPlayer()
     {
-        ownedByPlayer = true;
+        OwnedByPlayer = true;
     }
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (ownedByPlayer && collision.gameObject.TryGetComponent(out Enemy enemy))
+        if (OwnedByPlayer && collision.gameObject.TryGetComponent(out Enemy enemy))
         {
             enemy.ApplyDamage(damage);
             Instantiate(explosion, transform.position, Quaternion.identity);
             DestroyBullet(0);
             return;
         }
-        else if (!ownedByPlayer && collision.gameObject.TryGetComponent(out Player player))
+        else if (!OwnedByPlayer && collision.gameObject.TryGetComponent(out Player player))
         {
             player.ApplyDamage(damage);
             Instantiate(explosion, transform.position, Quaternion.identity);
             DestroyBullet(0);
             return;
         }
-        else if (ownedByPlayer && collision.gameObject.TryGetComponent(out Bullet bullet))
+        else if (OwnedByPlayer && collision.gameObject.TryGetComponent(out Bullet bullet))
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
             DestroyBullet(0);

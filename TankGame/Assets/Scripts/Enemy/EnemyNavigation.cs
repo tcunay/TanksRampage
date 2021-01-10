@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyNavigation : MonoBehaviour
 {
-    [SerializeField] private GameObject _dulo;
+    [SerializeField] private GameObject _cannon;
     [SerializeField] private GameObject _turret;
     [SerializeField] private Player _target;
 

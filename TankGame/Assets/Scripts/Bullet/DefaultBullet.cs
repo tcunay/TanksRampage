@@ -7,6 +7,6 @@ public class DefaultBullet : Bullet
 {
     private void Start()
     {
-        DestroyBullet(delay);
+        DestroyBullet(Delay);
     }
 }
