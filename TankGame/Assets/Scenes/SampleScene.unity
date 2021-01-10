@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9874c67675ef0624ca00627e8ceeb1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 998400377, guid: 66aecc1c966c54b458e5d0c3706757fe, type: 3}
+  _enemy: {fileID: 1865595858577595585, guid: 03d46ff3576d40543a35161804028c23, type: 3}
   _killCounter: {fileID: 1466544771}
   _delaySpawn: 10
   _increaseEnemies: 1
@@ -571,10 +571,10 @@ RectTransform:
   m_Father: {fileID: 2007760191}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.39721084, y: 0.52561975}
-  m_AnchorMax: {x: 0.5978929, y: 0.9018371}
-  m_AnchoredPosition: {x: 4.4999695, y: 1}
-  m_SizeDelta: {x: 3.7715454, y: -1.2284546}
+  m_AnchorMin: {x: 0.36400002, y: 0.52561975}
+  m_AnchorMax: {x: 0.634, y: 0.9018371}
+  m_AnchoredPosition: {x: 1.7935791, y: 0.6142273}
+  m_SizeDelta: {x: -5.8223267, y: -1.2284546}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &343883729
 MonoBehaviour:
@@ -1296,7 +1296,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &718301484
 GameObject:
@@ -1608,7 +1608,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 222e820074adcef4784ac53798982c6e, type: 3}
@@ -2712,7 +2712,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 82.3
+  m_fontSize: 76.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2981,7 +2981,7 @@ PrefabInstance:
     - target: {fileID: 5446229040943791547, guid: ecb08c1a2af5c1947b6caa11fbf9a2e8,
         type: 3}
       propertyPath: _health
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8315487514169452986, guid: ecb08c1a2af5c1947b6caa11fbf9a2e8,
         type: 3}
@@ -3026,7 +3026,7 @@ PrefabInstance:
     - target: {fileID: 8659678240781398784, guid: ecb08c1a2af5c1947b6caa11fbf9a2e8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8659678240781398784, guid: ecb08c1a2af5c1947b6caa11fbf9a2e8,
         type: 3}
@@ -3714,6 +3714,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1153908697}
     m_Modifications:
+    - target: {fileID: 3781609595069254677, guid: 00c9a71038ee62d408ed43e2cdcab8a1,
+        type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 5446229040943791547, guid: ecb08c1a2af5c1947b6caa11fbf9a2e8,
+        type: 3}
     - target: {fileID: 3781609595069254678, guid: 00c9a71038ee62d408ed43e2cdcab8a1,
         type: 3}
       propertyPath: m_LocalPosition.x

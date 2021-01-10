@@ -39,7 +39,7 @@ public class Spawner : MonoBehaviour
         for (int i = 0; i < _spawnPoints.Length; i++)
         {
             _spawnPoints[i] = SetLocation();
-           var enemy = Instantiate(_enemy, _spawnPoints[i], Quaternion.identity);
+            var enemy = Instantiate(_enemy, _spawnPoints[i], Quaternion.identity);//LookRotation(new Vector3(0, 1, 0), new Vector3(0, 0, 1)));
             enemy.EnemyDied += _killCounter.OnKillsChanged;
         }
     }
