@@ -47,7 +47,6 @@ public class Player : MonoBehaviour
     {
         _money += money;
         Debug.Log("Money = " + _money);
-        //MoneyChanged?.Invoke(_money);
     }
 
 }

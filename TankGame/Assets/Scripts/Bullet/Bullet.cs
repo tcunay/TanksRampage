@@ -22,21 +22,25 @@ public abstract class Bullet : MonoBehaviour
     {
         OwnedByPlayer = true;
     }
+
+    public void ProcessHit(Enemy enemy, Player player)
+    {
+        enemy?.ApplyDamage(damage);
+        player?.ApplyDamage(damage);
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        DestroyBullet(0);
+    }
     
     private void OnCollisionEnter(Collision collision)
     {
         if (OwnedByPlayer && collision.gameObject.TryGetComponent(out Enemy enemy))
         {
-            enemy.ApplyDamage(damage);
-            Instantiate(explosion, transform.position, Quaternion.identity);
-            DestroyBullet(0);
+            ProcessHit(enemy, null);
             return;
         }
         else if (!OwnedByPlayer && collision.gameObject.TryGetComponent(out Player player))
         {
-            player.ApplyDamage(damage);
-            Instantiate(explosion, transform.position, Quaternion.identity);
-            DestroyBullet(0);
+            ProcessHit(null, player);
             return;
         }
         else if (OwnedByPlayer && collision.gameObject.TryGetComponent(out Bullet bullet))

@@ -31,7 +31,6 @@ public class PlayerShoot : MonoBehaviour
         
     }
     
-
     private void Shoot()
     {
         _currentDelay += Time.deltaTime;
@@ -56,8 +55,6 @@ public class PlayerShoot : MonoBehaviour
 
     public void BuyBullet(Bullet bullet)
     {
-        //Money -= bullet.Price;
-        //MoneyChanged?.Invoke(Money);
         _bullets.Add(bullet);
     }
 

@@ -13,7 +13,6 @@ public class KillCounter : MonoBehaviour
     public void OnKillsChanged(int reward)
     {
         Debug.Log("Kill");
-        //_player.AddMoney(reward);
         _currentKills++;
         _kills.text = _currentKills.ToString();
     }
