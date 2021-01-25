@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 65810863}
   - component: {fileID: 65810862}
   - component: {fileID: 65810865}
+  - component: {fileID: 65810866}
   m_Layer: 0
   m_Name: Fencing
   m_TagString: Untagged
@@ -361,6 +362,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &65810866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65810860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2492cfd03993cc41a5bb28f6fba2ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &112971963
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +462,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.42313692, y: 0.33674166}
   m_AnchorMax: {x: 0.5758214, y: 0.40543064}
-  m_AnchoredPosition: {x: 0.6399994, y: 0.5}
+  m_AnchoredPosition: {x: 0.64001465, y: 0.5}
   m_SizeDelta: {x: 1.7127686, y: 0.53063965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &168678170
@@ -773,6 +786,7 @@ GameObject:
   - component: {fileID: 422727271}
   - component: {fileID: 422727270}
   - component: {fileID: 422727269}
+  - component: {fileID: 422727272}
   m_Layer: 0
   m_Name: Fencing2
   m_TagString: Untagged
@@ -854,6 +868,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422727267}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &422727272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422727267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2492cfd03993cc41a5bb28f6fba2ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &423841017
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +892,7 @@ GameObject:
   - component: {fileID: 423841021}
   - component: {fileID: 423841020}
   - component: {fileID: 423841019}
+  - component: {fileID: 423841022}
   m_Layer: 0
   m_Name: Fencing6
   m_TagString: Untagged
@@ -947,6 +974,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423841017}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &423841022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423841017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2492cfd03993cc41a5bb28f6fba2ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &506888482 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5446229040943791547, guid: ecb08c1a2af5c1947b6caa11fbf9a2e8,
@@ -995,7 +1034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.42313692, y: 0.46670374}
   m_AnchorMax: {x: 0.5758214, y: 0.5352223}
-  m_AnchoredPosition: {x: 0.6399994, y: 0.7653122}
+  m_AnchoredPosition: {x: 0.64001465, y: 0.7653122}
   m_SizeDelta: {x: 1.7127686, y: 1.5306396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528625103
@@ -1709,7 +1748,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.43400002, y: 0.23531258}
   m_AnchorMax: {x: 0.58210766, y: 0.70351505}
-  m_AnchoredPosition: {x: 0.6947994, y: -0.32469177}
+  m_AnchoredPosition: {x: 0.69480133, y: -0.32469177}
   m_SizeDelta: {x: -0.848526, y: 0.64940643}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &748302688
@@ -1761,6 +1800,7 @@ GameObject:
   - component: {fileID: 818729898}
   - component: {fileID: 818729897}
   - component: {fileID: 818729896}
+  - component: {fileID: 818729899}
   m_Layer: 0
   m_Name: Fencing5
   m_TagString: Untagged
@@ -1842,6 +1882,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818729894}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &818729899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818729894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2492cfd03993cc41a5bb28f6fba2ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &909053816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6645799074921047287, guid: 04db7882e1e7a0b45b36026dd252fa3e,
@@ -3548,6 +3600,7 @@ GameObject:
   - component: {fileID: 1622624534}
   - component: {fileID: 1622624533}
   - component: {fileID: 1622624532}
+  - component: {fileID: 1622624535}
   m_Layer: 0
   m_Name: Fencing4
   m_TagString: Untagged
@@ -3629,6 +3682,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622624530}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1622624535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622624530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2492cfd03993cc41a5bb28f6fba2ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1638237078
 GameObject:
   m_ObjectHideFlags: 0
@@ -3642,6 +3707,7 @@ GameObject:
   - component: {fileID: 1638237080}
   - component: {fileID: 1638237079}
   - component: {fileID: 1638237083}
+  - component: {fileID: 1638237084}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -3740,6 +3806,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1638237084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638237078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2492cfd03993cc41a5bb28f6fba2ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1682578018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4034,7 +4112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1772812933
 Transform:
   m_ObjectHideFlags: 0
@@ -4064,6 +4142,7 @@ GameObject:
   - component: {fileID: 1884231810}
   - component: {fileID: 1884231809}
   - component: {fileID: 1884231808}
+  - component: {fileID: 1884231811}
   m_Layer: 0
   m_Name: Fencing1
   m_TagString: Untagged
@@ -4145,6 +4224,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884231806}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1884231811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884231806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2492cfd03993cc41a5bb28f6fba2ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1898925650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4469,6 +4560,7 @@ GameObject:
   - component: {fileID: 2021947025}
   - component: {fileID: 2021947024}
   - component: {fileID: 2021947023}
+  - component: {fileID: 2021947026}
   m_Layer: 0
   m_Name: Fencing3
   m_TagString: Untagged
@@ -4550,6 +4642,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021947021}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2021947026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021947021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2492cfd03993cc41a5bb28f6fba2ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2099029138 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6645799074921047287, guid: 04db7882e1e7a0b45b36026dd252fa3e,
@@ -4566,7 +4670,7 @@ PrefabInstance:
     - target: {fileID: 3781609595043249698, guid: 00c9a71038ee62d408ed43e2cdcab8a1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.5705948
+      value: 0.5706024
       objectReference: {fileID: 0}
     - target: {fileID: 3781609595069254677, guid: 00c9a71038ee62d408ed43e2cdcab8a1,
         type: 3}

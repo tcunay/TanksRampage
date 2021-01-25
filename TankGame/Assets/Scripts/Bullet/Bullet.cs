@@ -8,8 +8,9 @@ public abstract class Bullet : MonoBehaviour
 {
     [SerializeField] private Player _player;
 
-    [SerializeField] protected int damage = 1;
-    [SerializeField] protected ParticleSystem explosion;
+    [SerializeField] protected int Damage = 1;
+    [SerializeField] protected ParticleSystem Explosion;
+    [SerializeField] protected ParticleSystem HittingTheGround;
 
     protected bool OwnedByPlayer = false;
     protected float Delay = 5f;
@@ -25,9 +26,9 @@ public abstract class Bullet : MonoBehaviour
 
     public void ProcessHit(Enemy enemy, Player player)
     {
-        enemy?.ApplyDamage(damage);
-        player?.ApplyDamage(damage);
-        Instantiate(explosion, transform.position, Quaternion.identity);
+        enemy?.ApplyDamage(Damage);
+        player?.ApplyDamage(Damage);
+        Instantiate(Explosion, transform.position, Quaternion.identity);
         DestroyBullet(0);
     }
     
@@ -45,7 +46,13 @@ public abstract class Bullet : MonoBehaviour
         }
         else if (OwnedByPlayer && collision.gameObject.TryGetComponent(out Bullet bullet))
         {
-            Instantiate(explosion, transform.position, Quaternion.identity);
+            Instantiate(Explosion, transform.position, Quaternion.identity);
+            DestroyBullet(0);
+            return;
+        }
+        else if(OwnedByPlayer && collision.gameObject.TryGetComponent(out Obstale obstale))
+        {
+            Instantiate(HittingTheGround, transform.position, Quaternion.identity);
             DestroyBullet(0);
             return;
         }

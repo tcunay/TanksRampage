@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: GiviGame
   productName: TankGame
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -40,9 +40,9 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: 6f7f05c2c9b264845982ff9a110824d1, type: 3}
+  - logo: {fileID: 21300000, guid: 6a32875927f18264db97f1c1a2390c33, type: 3}
     duration: 3
-  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 6f7f05c2c9b264845982ff9a110824d1,
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 6a32875927f18264db97f1c1a2390c33,
     type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -127,7 +127,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1
+  bundleVersion: 0.5
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -269,7 +269,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 6f7f05c2c9b264845982ff9a110824d1, type: 3}
+      m_Icon: {fileID: 2800000, guid: 6a32875927f18264db97f1c1a2390c33, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
