@@ -99,6 +99,7 @@ MonoBehaviour:
   _player: {fileID: 5446229040943791547, guid: ecb08c1a2af5c1947b6caa11fbf9a2e8, type: 3}
   _killCounter: {fileID: 3781609595069254677, guid: 00c9a71038ee62d408ed43e2cdcab8a1,
     type: 3}
+  _explosionAudio: {fileID: 0}
   _health: 1
   _damage: 1
   _reward: 100
@@ -119,8 +120,6 @@ MonoBehaviour:
   _minZPosition: 3
   _maxZPosition: 33
   _waypointsSize: 5
-  _moveSpeed: 5
-  _rotateSpeed: 0
   _duration: 15
 --- !u!114 &5401049512632610657
 MonoBehaviour:

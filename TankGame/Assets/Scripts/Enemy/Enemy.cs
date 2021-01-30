@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private KillCounter _killCounter;
-
     [SerializeField] private int _health;
     [SerializeField] private int _damage;
     [SerializeField] private int _reward = 100;

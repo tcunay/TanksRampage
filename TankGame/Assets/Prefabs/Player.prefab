@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6799a339224bacb47858bce5aa3d02f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cannon: {fileID: 0}
+  _cannon: {fileID: 2810097189394879786}
   _rotateSpeed: 50
 --- !u!114 &911521292
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _menu: {fileID: 0}
-  _health: 1
+  _health: 10
   _damage: 1
   _money: 2100
 --- !u!1001 &1325906142
@@ -447,6 +447,12 @@ Transform:
 --- !u!1 &3785546143832490366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5417571068371359125, guid: 3bda796c64144b2489bbce1ec489770a,
+    type: 3}
+  m_PrefabInstance: {fileID: 9198569287315952875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2810097189394879786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2785306466888875583, guid: 3bda796c64144b2489bbce1ec489770a,
     type: 3}
   m_PrefabInstance: {fileID: 9198569287315952875}
   m_PrefabAsset: {fileID: 0}

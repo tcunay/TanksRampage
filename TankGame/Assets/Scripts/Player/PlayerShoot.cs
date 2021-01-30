@@ -8,6 +8,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private List<Bullet> _bullets;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private TrajectoryRenderer _trajectoryRenderer;
+    [SerializeField] private Toasty _toasty;
 
     [SerializeField] private float _throwForce;
     [SerializeField] private float _delay;
@@ -15,7 +16,7 @@ public class PlayerShoot : MonoBehaviour
     private Bullet _bullet;
     private Bullet _currentBullet;
 
-    private int _currentBulletNumber = 0;
+    private int _currentBulletNumber;
     private float _currentDelay;
 
     private void Start()
@@ -30,7 +31,12 @@ public class PlayerShoot : MonoBehaviour
         Shoot();
         
     }
-    
+
+    private void OnDisable()
+    {
+        _currentBullet.ToastyActive -= _toasty.ActiveAnim;
+    }
+
     private void Shoot()
     {
         _currentDelay += Time.deltaTime;
@@ -38,6 +44,7 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _currentDelay >= _delay)
         {
             _bullet = Instantiate(_currentBullet, _shootPoint.transform.position, Quaternion.identity);
+            _bullet.ToastyActive += _toasty.ActiveAnim;
             _bullet.InstallForPlayer();
             _currentDelay = 0;
 

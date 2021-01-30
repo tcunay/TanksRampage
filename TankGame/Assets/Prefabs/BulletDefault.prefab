@@ -124,6 +124,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 5446229040943791547, guid: ecb08c1a2af5c1947b6caa11fbf9a2e8, type: 3}
-  Damage: 1
-  Explosion: {fileID: 19800006, guid: e4704660d196fac40802911e12ac76f1, type: 3}
+  ExplosionAudio: {fileID: 237545074369132947, guid: 6f9832d8bd5560a449774f4641f95e8d,
+    type: 3}
+  MissAudio: {fileID: 2850801044249392413, guid: c9c9f4ecc1d2c824d823bdc017190a3e,
+    type: 3}
+  HitPlayerAudio: {fileID: 870257430504445741, guid: 89886cf5aeca1814cbdf789ea64e36b0,
+    type: 3}
+  Toasty: {fileID: 4049062472445412688, guid: 816ed2d9762e2964c9ffd58a8cb746c0, type: 3}
+  ExplosionEffect: {fileID: 19800006, guid: d609d5ebc845aca409f72e9c6a56dc60, type: 3}
   HittingTheGround: {fileID: 19800002, guid: ac1aa04288fad804ba1cd769f4377aaf, type: 3}
+  ToastyActived:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4049062472445412688, guid: 816ed2d9762e2964c9ffd58a8cb746c0,
+          type: 3}
+        m_MethodName: ActiveAnim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Damage: 1
