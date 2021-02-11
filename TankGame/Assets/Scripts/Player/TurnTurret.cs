@@ -4,33 +4,21 @@ using UnityEngine;
 
 public class TurnTurret : MonoBehaviour
 {
-    [SerializeField] GameObject _turret;
+    [SerializeField] private GameObject _turret;
+    [SerializeField] private TouchHandler _touchHandler;
     [SerializeField] private float _rotateSpeed;
 
     private Quaternion _rotate;
 
-    private float _angle;
-
     private void Update()
     {
-        Turn(SetRotation());
+        Turn(_touchHandler.GetDirection());
     }
 
-    private float SetRotation()
-    {
-        if (Input.GetKey(KeyCode.LeftArrow))
-            _angle = -1;
-        else if (Input.GetKey(KeyCode.RightArrow))
-            _angle = 1;
-        else
-            _angle = 0;
-        return _angle;
-    }
-
-    private void Turn(float angle)
+    private void Turn(Vector2 angle)
     {
         float scaledRotateSpeed = _rotateSpeed * Time.deltaTime;
-        _rotate = Quaternion.AngleAxis(angle * scaledRotateSpeed, Vector3.forward);
+        _rotate = Quaternion.AngleAxis(angle.x * scaledRotateSpeed, Vector3.forward);
        _turret.transform.rotation *= _rotate;
     }
 }

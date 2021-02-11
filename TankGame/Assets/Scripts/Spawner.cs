@@ -25,14 +25,14 @@ public class Spawner : MonoBehaviour
     private IEnumerator SpawnEnemies()
     {
         var waitForSeconds = new WaitForSeconds(_delaySpawn);
-        int currentQyantity = _initialQuantityEnemies;
+        int currentQuantity = _initialQuantityEnemies;
         int waveNumber = 1;
 
         while (true)
         {
-            Debug.Log("Wave = " + waveNumber++);
-            CreateEnemy(currentQyantity);
-            currentQyantity += _increaseEnemies;
+            //Debug.Log("Wave = " + waveNumber++);
+            CreateEnemy(currentQuantity);
+            currentQuantity += _increaseEnemies;
             yield return waitForSeconds;
         }
     }

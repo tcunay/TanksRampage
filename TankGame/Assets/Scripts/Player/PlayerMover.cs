@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMover : MonoBehaviour
 {
+    [SerializeField] private Joystick _joystick;
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotateSpeed;
 
@@ -21,12 +22,19 @@ public class PlayerMover : MonoBehaviour
 
     private Vector2 SetDirection()
     {
-        if (Input.GetKey(KeyCode.W))
-            _direction = new Vector2(0, 2);
-        else if (Input.GetKey(KeyCode.S))
-            _direction = new Vector2(0, -2);
-        else
-            _direction = new Vector2(0, 0);
+        _direction = new Vector2(0, _joystick.Vertical);
+        //if (Input.GetKey(KeyCode.W))
+        //{
+        //    _direction = new Vector2(0, 2);
+        //}
+        //else if (Input.GetKey(KeyCode.S))
+        //{
+        //    _direction = new Vector2(0, -2);
+        //}
+        //else
+        //{
+        //    _direction = new Vector2(0, 0);
+        //}
         return _direction;
     }
 
@@ -38,12 +46,19 @@ public class PlayerMover : MonoBehaviour
     }
     private float SetRotation()
     {
-        if (Input.GetKey(KeyCode.A))
-            _angle = -1;
-        else if (Input.GetKey(KeyCode.D))
-            _angle = 1;
-        else
-            _angle = 0;
+        _angle = _joystick.Horizontal;
+        //if (Input.GetKey(KeyCode.A))
+        //{
+        //    _angle = -1;
+        //}
+        //else if (Input.GetKey(KeyCode.D))
+        //{
+        //    _angle = 1;
+        //}
+        //else
+        //{
+        //    _angle = 0;
+        //}
         return _angle;
     }
     private void Turn(float angle)

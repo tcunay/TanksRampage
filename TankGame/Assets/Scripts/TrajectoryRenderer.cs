@@ -20,7 +20,7 @@ public class TrajectoryRenderer : MonoBehaviour
         _lineRendererComponent.positionCount = _points.Length;
         for (int i = 0; i < _points.Length; i++)
         {
-            _elapsedTime = i * 0.1f;
+            _elapsedTime = i * 0.05f;
 
             _points[i] = origin + speed * _elapsedTime + Physics.gravity * _elapsedTime * _elapsedTime / 2f;
 

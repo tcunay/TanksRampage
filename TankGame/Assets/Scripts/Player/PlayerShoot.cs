@@ -9,6 +9,8 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private TrajectoryRenderer _trajectoryRenderer;
     [SerializeField] private Toasty _toasty;
+    [SerializeField] private AudioSource _shootAudio;
+    [SerializeField] private TouchHandler _touchHandler;
 
     [SerializeField] private float _throwForce;
     [SerializeField] private float _delay;
@@ -18,6 +20,7 @@ public class PlayerShoot : MonoBehaviour
 
     private int _currentBulletNumber;
     private float _currentDelay;
+    private bool _isPressed;
 
     private void Start()
     {
@@ -31,18 +34,24 @@ public class PlayerShoot : MonoBehaviour
         Shoot();
         
     }
+    private void OnEnable()
+    {
+        _touchHandler.OnShoot += PressShootButton;
+    }
 
     private void OnDisable()
     {
         _currentBullet.ToastyActive -= _toasty.ActiveAnim;
+        _touchHandler.OnShoot -= PressShootButton;
     }
 
     private void Shoot()
     {
         _currentDelay += Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Space) && _currentDelay >= _delay)
+        if ((Input.GetKeyDown(KeyCode.Space) || _isPressed) && _currentDelay >= _delay)
         {
+            _isPressed = false;
             _bullet = Instantiate(_currentBullet, _shootPoint.transform.position, Quaternion.identity);
             _bullet.ToastyActive += _toasty.ActiveAnim;
             _bullet.InstallForPlayer();
@@ -52,8 +61,15 @@ public class PlayerShoot : MonoBehaviour
 
             bullet.AddForce(_shootPoint.forward * _throwForce, ForceMode.VelocityChange);
             Destroy(_bullet, 5f);
+            _shootAudio.Play();
         }
     }
+
+    private void PressShootButton()
+    {
+        _isPressed = true;
+    }
+
 
     private void ChangeBullet(Bullet bullet)
     {
